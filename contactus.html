@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoLocation</title>
+
+    <link rel="stylesheet" href="../css/cssstyle.css">
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/geolocation_favicon.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!--home section starts-->
+
+    <section class="home" id="home">
+        <div id="body">
+
+            <!--header class starts-->
+            <header class="header2">
+
+
+                <!--add logo image in header-->
+                <a href="../html/home.html">
+                    <img src="../images/geolocation_logo.png" class="GeoLocation logo"> <!--added logo-->
+                </a>
+
+                <nav class="contact-navbar">
+
+                    <a href="../html/home.html">HOME</a>
+
+                    <span class="navbar2" id="separator">|</span> <!--add a vertical separator-->
+                    <a href="../html/aboutus.html">ABOUT US</a>
+                    <span class="navbar2" id="separator">|</span>
+                    <a href="../html/contactus.html">CONTACT US</a>
+                    <span class="navbar2" id="separator">|</span>
+                    <a href="../html/comparelocations.html">COMPARE LOCATIONS</a>
+                </nav>
+
+
+            </header>
+            <!--header class ends-->
+
+            <div class="contact-content">
+                <h1>GET IN TOUCH WITH US</h1>
+
+            </div>
+        </div>
+
+        <section class="description">
+            <div class="row">
+                <div class="column1">
+                    <h1>About the Developer</h1>
+                    <h2>Anna Akhigbe Ayomide</h2>
+                    <p>
+                        As a student of African Leadership Mauritius and a developer with a keen interest in data
+                        science and AI, I am a motivated and innovative individual with a passion for using technology
+                        to solve real-world problems. My interest in web development is another valuable asset, as it
+                        allows me to create visually appealing and interactive web applications that can enhance the
+                        user experience. With my skills in web development, I can build web applications that integrate
+                        data science and AI to provide valuable insights and actionable information. Overall, my skills
+                        and interests in data science, AI, and web development position me as a well-rounded and capable
+                        developer with a broad range of skills that can be applied to various projects and industries.
+                    </p>
+                </div>
+
+                <div class="column2">
+                    <div class="line"></div>
+                    <img src="../images/geolocation_author.jpg" class="img" alt="GeoLocation">
+                </div>
+            </div>
+        </section>
+
+        <div class="flex-container">
+
+            <div>
+                <div class="contact-us">
+                    <form method="post" action="http://localhost/contactusphp/insertphp.php"> <!--added a form-->
+                        <label for="name"> Full Name *</label><br>
+                        <input type="text" name="name" class="form-control" required> <br>
+
+                        <label for="mobile">Mobile Number</label><br>
+                        <input type="text" name="mobile" class="form-control"><br>
+
+                        <label for="email">Email *</label><br>
+                        <input type="email" name="email" class="form-control" required><br>
+
+                        <label for="subject">Subject</label><br>
+                        <input type="text" name="subject" class="form-control"><br>
+
+                        <label for="message">Your Message</label><br>
+                        <textarea name="message" class="form-control" placeholder="Write something.."
+                            style="height:130px"></textarea>
+                        <br>
+
+                        <input type="submit" value="Submit" name="submit" class="form-control submit">
+                    </form>
+
+                </div>
+            </div>
+
+            <!--google map is added-->
+            <div class="responsive-map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d63433.28491496472!2d3.437329629344129!3d6.447893395821387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x103bf452da3bd44b%3A0x47331fb41adc9d28!2sLekki%20Phase%201!3m2!1d6.447809299999999!2d3.4723495!4m5!1s0x103bf452da3bd44b%3A0x47331fb41adc9d28!2sLekki%20Phase%201%20106104%2C%20Lekki%2C%20Nigeria!3m2!1d6.447809299999999!2d3.4723495!5e0!3m2!1sen!2smu!4v1650221834695!5m2!1sen!2smu"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+        <!--home section ends-->
+
+        <!--footer section begins here-->
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <a href="../html/home.html">
+                        <img src="../images/geolocation_logo.png" class="GeoLocation logo"> <!--added logo-->
+                    </a>
+                    <p>Copyright &#169; 2023 GeoLocation<br> All Rights Reserved </p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook-f" aria-hidden="true"
+                                    style="color:white;"></i></a></li>
+                        <li><a href="https://instagram.com/"><i class="fa fa-instagram" aria-hidden="true"
+                                    style="color:white;"></i></a></li>
+                        <li><a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"
+                                    style="color:white;"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="col">
+                    <i class="fa fa-map-marker fa-5x"> </i>
+                    <h3>ADDRESS</h3>
+                    <address>50 Parkview Lane, Port Louis Mauritius</address>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="col">
+                    <i class="fa fa-phone fa-5x"> </i>
+                    <h3>Phone Number</h3>
+                    <p class="text-center">+230 5589 6705</p>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="col">
+                    <i class="fa fa-envelope-o fa-5x"> </i>
+                    <h3>Email</h3>
+                    <p>geolocation@gmail.com</p>
+                </div>
+            </div>
+        </footer>
+        <!--footer section ends-->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

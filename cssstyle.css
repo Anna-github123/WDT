@@ -1,0 +1,792 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 1200px) {
+    .back-video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/**media query to add a breakpoint at 600px:
+@media only screen and (max-width:600px) {
+
+    .home,
+    .header,
+    .content,
+    .border,
+    .values,
+    .flex-container {
+        width: 100%;
+        margin-top: 0;
+    }
+
+}**/
+
+.back-video {
+    z-index: -1;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/**set the header**/
+.header1 {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/** these apply to the logo**/
+.header1 .logo {
+    height: 12rem;
+    /** set the height of the logo**/
+    padding: 40px 0 0 0px;
+    margin-right: 25px;
+}
+
+/** These affect the navbar in the header**/
+.home-navbar {
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: .2s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** These set the navigation links **/
+.home-navbar a {
+    font-family: 'Calibri';
+    position: relative;
+    text-decoration: none;
+    text-transform: capitalize;
+    align-items: center;
+    justify-content: space-between;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+/**these apply to the text in the navbar**/
+.header1 .home-navbar a {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 20px;
+    color: black;
+    display: inline-block;
+    font-weight: 400;
+
+}
+
+.navbar1#separator {
+    padding-left: 20px;
+    padding-right: 15px;
+    color: firebrick;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.home-navbar a::after {
+    content: "";
+    background: firebrick;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.home-navbar a:hover::after {
+    width: 100%;
+}
+
+/*these apply to the content on the bg video*/
+.home .content1 {
+    text-align: center;
+    height: 100px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+    /** to add border**/
+    box-sizing: border-box;
+    border-style: none;
+    border-radius: 3px;
+    height: 250px;
+    width: 90%;
+    text-align: left;
+    color: white;
+    background-color: black;
+    opacity: 0.6;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.home .content1 p {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin: 14px 0 0 1px;
+}
+
+.home .content1 h1 {
+    font-family: 'Calibri';
+    font-size: 60px;
+    letter-spacing: 3.5px;
+    font-weight: 300;
+    margin: 20px 0 0 1px;
+    line-height: 1.1;
+}
+
+.home .border {
+    box-sizing: border-box;
+    border: 1px solid;
+    background-color: firebrick;
+    border-style: none;
+    border-radius: 3px;
+    height: 370px;
+    width: 220px;
+    float: right;
+    position: absolute;
+    top: 170px;
+    right: 110px;
+    opacity: 0.4;
+}
+
+/* add border right*/
+.description .line {
+    height: 200px;
+    width: 3px;
+    top: 250px;
+    background-color: chocolate;
+    position: relative;
+}
+
+/**adds a vertical tab row**/
+.description .row {
+    display: flex;
+    padding: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/**adds a vertical tab column**/
+.description .column1,
+.column2 {
+    text-align: justify;
+    font-family: 'Calibri';
+}
+
+.description .column1 h1 {
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 24px;
+    margin-left: 200px;
+}
+
+.description .column1 h1::after {
+    content: "";
+    border-bottom: 5px solid darkgreen;
+    display: block;
+    width: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.description .column1 h2 {
+    margin-left: 50px;
+    padding-top: 10px;
+    font-weight: 200;
+    color: firebrick;
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.description .column1 p {
+    width: 80%;
+    margin-left: 50px;
+    position: relative;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+/*sets the image*/
+.description .column2 img {
+    width: 500px;
+    height: 350px;
+    position: relative;
+    animation: mymove 10s infinite;
+}
+
+/*add animation to image*/
+.column2 img {
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes mymove {
+    from {
+        bottom: 0px;
+    }
+
+    to {
+        bottom: 40px;
+    }
+}
+
+/* The container */
+.flex-container {
+    display: flex;
+}
+
+.flex-container>div {
+    width: 100%;
+    margin-left: 80px;
+    overflow: hidden;
+}
+
+.flex-container>div a {
+    color: #fff;
+    font-size: 20px;
+}
+
+.values {
+    background-color: firebrick;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 100%;
+    line-height: 4;
+    margin-bottom: 200px;
+    margin-top: 100px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    color: white;
+}
+
+.topic {
+    font-size: 30px;
+    text-align: center;
+    color: khaki;
+}
+
+.topic a::after {
+    content: "";
+    display: block;
+    width: 80px;
+    border-bottom: 1px solid #fff;
+    margin-top: 0;
+    margin-left: 590px;
+    margin-bottom: 20px;
+}
+
+.checked {
+    color: khaki;
+    font-size: 30px;
+    padding-right: 8px;
+}
+
+/**media query to add a breakpoint at 800px: making it responsive **/
+@media screen and (max-width: 600px) {
+
+    .home,
+    .header,
+    .fa-comments-o::before,
+    .fa-question::before,
+    .responsive-map-container,
+    .contact-us {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+#body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/kenya_country_profile.jpg');
+    /*added a background image*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -40px;
+    height: 250px;
+    opacity: 0.9;
+}
+
+
+/*these apply to the header*/
+.header2 {
+    height: 290px;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.9;
+    /*changed the background color to black*/
+    border: 1px solid;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+/** these apply to the logo**/
+.header2 .logo {
+    height: 11rem;
+    /** set the height of the logo**/
+    margin-bottom: 160px;
+}
+
+/** These affect the navbar in the header**/
+.contact-navbar {
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    transition: .2s linear;
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+/** These set the navigation links **/
+.contact-navbar a {
+    font-family: 'Calibri';
+    position: relative;
+    text-decoration: none;
+    text-transform: capitalize;
+    align-items: center;
+    justify-content: space-between;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+/**these apply to the text in the navbar**/
+.header2 .contact-navbar a {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 20px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 400;
+
+}
+
+/*sets the vertical line*/
+.navbar2#separator {
+    padding-left: 20px;
+    padding-right: 15px;
+    color: #fff;
+    /*sets the color of the line to white*/
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contact-navbar a::after {
+    content: "";
+    background: firebrick;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 26px;
+    transition: width 0.5s;
+}
+
+.contact-navbar a:hover::after {
+    width: 100%;
+}
+
+.home .contact-content h1 {
+    font-family: 'Calibri';
+    font-size: 40px;
+    position: absolute;
+    font-weight: 100;
+    margin-left: 180px;
+    line-height: 1.1;
+    color: #fff;
+    top: 200px;
+    box-sizing: border-box;
+    word-spacing: 5px;
+
+}
+
+/* The container */
+.flex-container {
+    display: flex;
+}
+
+.flex-container>div {
+    width: 100%;
+    overflow: hidden;
+}
+
+/*sets the form*/
+form {
+    margin-top: 30px;
+    transition: all 4s ease-in-out;
+}
+
+.contact-us {
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 35px 15px 0 15px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    width: 50%;
+}
+
+.form-control {
+    background: transparent;
+    width: 500px;
+    color: black;
+    background-color: darkgray;
+    border: 1px solid #444;
+    border-radius: 10px;
+    height: 40px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+label {
+    line-height: 2;
+    margin: 0 0 1rem 0;
+    font-family: 'Calibri';
+    color: black;
+    font-size: 20px;
+}
+
+/*sets the input type submit button*/
+form .submit {
+    width: 90px;
+    background-color: #444;
+    color: aquamarine;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form .submit:hover {
+    cursor: pointer;
+}
+
+.contact-us p {
+    font-family: 'Calibri';
+}
+
+/* Style the container/contact section */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+
+}
+
+/*sets the map*/
+.responsive-map-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.responsive-map-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+img {
+    vertical-align: middle;
+    width: 100%;
+    height: 28rem;
+}
+
+.myslideshow-container {
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Number text (1/10) */
+.numbertext {
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    position: relative;
+    display: block;
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    color: white;
+    background: black;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+ul li:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(0.9);
+    transition: .5s;
+}
+
+ul li:nth-child(1):before {
+    background: #4267B2;
+}
+
+ul li:nth-child(2):before {
+    background: #E1306C;
+}
+
+ul li:nth-child(3):before {
+    background: #1DA1F2;
+}
+
+ul li:hover:before {
+    filter: blur(3px);
+    transform: scale(1.2);
+    /*box-shadow: 0 0 15px #4267B2*/
+}
+
+ul li:nth-child(1):hover:before {
+    box-shadow: 0 0 15px #4267B2;
+}
+
+ul li:nth-child(2):hover:before {
+    box-shadow: 0 0 15px #E1306C;
+}
+
+ul li:nth-child(3):hover:before {
+    box-shadow: 0 0 15px #1DA1F2;
+}
+
+ul li:nth-child(1):hover {
+    color: #456CBA;
+    box-shadow: 0 0 15px #4267B2;
+    text-shadow: 0 0 15px #4267B2;
+}
+
+ul li:nth-child(2):hover {
+    color: #2A6CBB;
+    box-shadow: 0 0 15px #E1306C;
+    text-shadow: 0 0 15px #E1306C;
+}
+
+ul li:nth-child(3):hover {
+    color: #26AFF2;
+    box-shadow: 0 0 15px #1DA1F2;
+    text-shadow: 0 0 15px #1DA1F2;
+}
+
+/*these apply to the footer*/
+footer {
+    bottom: 0;
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 100px;
+    background-color: black;
+    opacity: 0.85;
+    color: #fff;
+    /*set the color of the text in the footer to white*/
+    font-family: 'Calibri';
+    /*set the font style*/
+    font-size: 13px;
+    /*set the the size of the text*/
+    border-top-left-radius: 125px;
+    height: auto;
+}
+
+/*set the logo in the footer*/
+footer img {
+    height: 8rem;
+    width: 11rem;
+    /*increases the size*/
+    margin: 0;
+}
+
+footer .row {
+    width: 100%;
+    /*increases the width*/
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    /*align the content at the center*/
+}
+
+.col {
+    flex-basis: 22%;
+}
+
+.line {
+    height: 100px;
+    width: 0.9px;
+    background-color: #fff;
+    /*set color of the line to white*/
+    position: relative;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin: 15px 0;
+    font-weight: 700;
+    color: aquamarine;
+    /*change the text color to aquamarine*/
+}
+
+/*set the address in the footer*/
+address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 1.4;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.text-center {
+    text-align: center;
+    /*make the text align at the center*/
+}
+
+footer p {
+    color: #fff;
+    /*change the color*/
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 1.4;
+}
